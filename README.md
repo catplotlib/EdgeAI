@@ -41,7 +41,18 @@ A TensorFlow Lite interpreter is set up to evaluate the quantized model's perfor
 
 ### Final Evaluation and Comparison
 
-The original, quantized, and pruned models' performances are evaluated and compared. This comparison is crucial to understand the trade-offs made between model size, speed, and accuracy.
+After optimizing and evaluating the models, the following results were obtained:
+
+- Original Model Accuracy: 81.47%
+- Quantized Model Accuracy: 79.44%
+- Pruned Model Accuracy: 53.81%
+
+These results illustrate the trade-offs between model complexity and performance:
+
+- The **original model** shows the highest accuracy, which is expected as it retains all its parameters and complexity.
+- The **quantized model** demonstrates a slight decrease in accuracy. This minor reduction is a favorable outcome, considering the significant benefits in terms of reduced model size and faster inference, making it suitable for edge devices.
+- The **pruned model** shows a substantial decrease in accuracy. This suggests that the pruning might have been too aggressive, leading to a loss of important features necessary for making accurate predictions. It indicates a need to fine-tune the pruning process, balancing model size reduction with performance retention.
+
 
 ## Execution Instructions
 
